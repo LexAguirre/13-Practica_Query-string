@@ -27,7 +27,7 @@ En cambio, cuando la petición es mediante POST, el query string es “movido”
 
 Para “sacar” la información del Query string, en el caso de un método GET, es relativamente sencillo debido a que “Express” ya hace el “parseo” de lo query string y nos permite acceder a la colección de parámetros mediante la notación del “.” punto.
 
-> ENTREGA: Jueves 28 DE ABRIL DEL 2022
+> ENTREGA: JUEVES 28 DE ABRIL DEL 2022
 
 ## EXPLICACIÓN DEL PROCESO
 
