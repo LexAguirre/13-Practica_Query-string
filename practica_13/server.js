@@ -29,6 +29,7 @@ app.get("/person/:id", (req, res) => {
     Times: req.query.times,
   });
 });
+//Ahora en lugar de dos llaves recibira 3 y las query estan vinvuladas por lo que vastara con poner un & entre el message y el times para que se puedan utilizar los dos valores
 
 app.get("/numbers/:id", function (req, res) {
   res.render("numbers", { number: req.params.id });
