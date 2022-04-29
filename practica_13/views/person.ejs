@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href ='/assets/style.css'>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
@@ -41,18 +42,28 @@
         <% } %>
         <% } %>
 -->
+<!-- Ahora se realizo lo mismo pero con break y dio el mismo resultado -->
       
-      <% switch (Msg) { case 'Hola': %> <% for(var i=0; i < Times; i++) { %>
-        <li>Hola <%= ID %></li>
-        <% } %> <% break; case 'Adios': %> <% for(var i=0; i < Times; i++) { %>
-        <li>Adios <%= ID %></li>
-        <% } %> <% break; case 'Bienvenido': %> <% for(var i=0; i < Times; i++) {
-        %>
-        <li>Bienvenido <%= ID %></li>
-        <% } %> <% break; default: %> <% for(var i=0; i< Times; i++) { %>
-        <li><%= Msg %> <%= ID %></li>
-        <% } %>
-        <h3></h3>
+      <% switch (capitalized) { 
+        case 'Hello': %> 
+          <% for(var i=0; i < Times; i++) { %>
+          <li>Hello <%= ID %></li>
+          <% } %> 
+          <% break; 
+        case 'Goodbye': %> 
+          <% for(var i=0; i < Times; i++) { %>
+          <li>Goodbye <%= ID %></li>
+          <% } %> 
+          <% break; 
+        case 'Welcome': %> 
+          <% for(var i=0; i < Times; i++) { %>
+          <li>Welcome <%= ID %></li>
+          <% } %> 
+          <% break; 
+        default: %> 
+          <% for(var i=0; i< Times; i++) { %>
+          <li><%= capitalized %> <%= ID %></li>
+          <% } %>
         <% break; } %>  
   </ul>
 
