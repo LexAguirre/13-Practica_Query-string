@@ -11,14 +11,23 @@ app.set("view engine", "ejs");
 });*/
 
 app.get("/", (req, res) => {
-  res.send(`<!DOCTYPE html> <html lang="en"> <head> <link rel="stylesheet" href = '/assets/style.css'
+  res.send(`<!DOCTYPE html> <html lang="en"> <head> <link rel="stylesheet" href ='/assets/style.css'>
   <title>Document</title> </head> 
-  <body> <h1>Document</h1>
+  <body> <h1>Hola mundo</h1>
+  <p> Este es un parrafo y su contenido debe ser azul</p></body> </html>
   `);
-});
+}); //ahora en lugar de ejecutar un html, directamente ejecutamos el codigo en JS
 
-app.get("/person/:id", function (req, res) {
-  res.render("person", { ID: req.params.id });
+/*app.get("/person/:id", (req, res) => {
+  res.render("person", { ID: req.params.id, Qstr: req.query.qrst });
+}); */ // En esta ocacion la funcion tiene dos llaves una es el ID, la cual le otorgamos a la pagina, pero la otra es el Qstr la cual es otorgada por express y es una cadena de consulta.
+
+app.get("/person/:id", (req, res) => {
+  res.render("person", {
+    ID: req.params.id,
+    Message: req.query.message,
+    Times: req.query.times,
+  });
 });
 
 app.get("/numbers/:id", function (req, res) {
