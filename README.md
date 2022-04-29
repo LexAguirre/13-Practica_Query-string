@@ -39,29 +39,29 @@ Para “sacar” la información del Query string, en el caso de un método GET,
 
 4. Instala el paquete 'ejs' con el comando npm i express --save o npm i ejs
 
-5. Crea un nuevo archivo app.js en el cual se le pasara todo el codigo hecho en la practica anterior
+5. Crea un nuevo archivo server.js en el cual se le pasara todo el codigo hecho en la practica anterior
 
-6. Crea una nueva carpeta llamada "public" dentro de la carpeta "practica_12"
+6. Crea una nueva carpeta llamada "public" dentro de la carpeta "practica_13"
 
 7. Dentro de la carpeta "public" crea un nuevo archivo style.css
 
-8. Dentro del archivo style.css se le escribira body y dentro de este tendra un front-family : 'Roboto Condensed', sans-serif;
+8. Dentro del archivo style.css se le escribira body y dentro de este tendra un front-family : 'Roboto Condensed', sans-serif ademas se definira el color del texto como azul y en el h1 como rojo;
 
-9. En el archivo app.js con el app.use donde tenemos la carpeta virtual llamada "assets" y ese nombre sera mapeado con la carpeta fisica llamada "public"
+9. En el archivo server.js con el app.use donde tenemos la carpeta virtual llamada "assets" y ese nombre sera mapeado con la carpeta fisica llamada "public"
 
 10. Despues de la linea cuatro se inserta el codigo con el que se espesifica la app de express y su engine ejs
 
-11. Ahora se crea una carpeta al nivel de public la cual se llamara Views y dentro de esta se creara un archivo llamado numbers.ejs
+11. Ahora en el archivo server.js se colocara un html basico dentro del app.get de la pagina principal del servidor
 
-12. Ahora se ingresa el codigo igual como se realiza en html.
+12. En el app.get de persons se colocara otra llave ademas del Id la cual sera un query string
 
-13. Pero dejeremos ejecutar scripts de JS para poder realizar el ejercicio para hacerlo deberemos utilizar <% %> esa sentencia y dentro de ella colocar los scripts para que lo pueda ejecutar desde el ejs
+13. y tambien se medificara el archivo de person.ejs para que muestre el ID y el Query string
 
-14. Regresando al app.js en la ruta numbers colocaremos res.render("numbers", { number: req.params.id }); para que tome el numero y lo mande
+14. Ahora se ejecuta el comando "npx nodemon server en la terminal y acccede a http://localhost:3000/Person/Ramon?message=hello para observar el resultado
 
-15. Ahora se ejecuta el comando "nodemon app” en la terminal y acccede a localhost:3000/numbers/6 para observar el resultado
+15. Para continuar se realizo una actividad en la cual teniamos que hacer un ciclo imprimiendo en el server la palabra Hello, Goodbye o Welcome seguido del ID ingresado pero el ciclo sera indicado por otro key que estara dentro del app.get de person, tal key sera nombrado Times
 
-16. tambien se puede observar el resultado con un numero impar
+16. Ahora se ejecuta el comando "npx nodemon server” en la terminal y acccede a http://localhost:3000/Person/Ramon?message=hello&times=3 para observar el resultado
 
 ## RECURSOS
 
